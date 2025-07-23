@@ -1,0 +1,128 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    background-image: url('../styles-login/flores\ \(1\).png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0; /* Agregado para resetear el margen */
+}
+
+/* Sección izquierda con el login */
+.left-section {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.473); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Sección derecha vacía con la imagen de fondo */
+.right-section {
+    width: 50%;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 { /* Selector más específico */
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Inputs con iconos */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex; /* Agrupando reglas */
+    align-items: center;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Iconos dentro de los inputs */
+.input-group i {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    color: white;
+}
+
+/* Botón */
+.login-container button { /* Selector más específico */
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container button:hover { /* Selector más específico */
+    background-color: #5348d1;
+}
+
+/* Texto debajo del botón */
+.login-container p { /* Selector más específico */
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-container a { /* Selector más específico */
+    color: #a3a1ff;
+    text-decoration: none;
+}
+
+.login-container a:hover { /* Selector más específico */
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: none; /* Ocultar mensajes de error por defecto */
+}
+
+.input-group {
+    min-height: 40px; /* Ajusta este valor según sea necesario */
+}
+
+.input-group i {
+    z-index: 10; /* Centra el icono verticalmente */
+}

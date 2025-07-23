@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Permitir acceso a archivos estáticos (CSS, JS, imágenes)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|ico|pdf)$ [NC]
+RewriteRule ^ - [L]
+
+# Si el archivo existe físicamente, permitir acceso
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Si el directorio existe físicamente, permitir acceso
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Prevenir acceso directo solo a archivos específicos sensibles (excepto 404.php)
+RewriteRule ^db/(?!404\.php$).*\.(php|sql)$ - [F,L]
+RewriteRule ^config_perfil\.(css|php)$ - [F,L]
+
+# Redirigir todo lo demás al router
+RewriteRule ^(.*)$ router.php?route=$1 [QSA,L]

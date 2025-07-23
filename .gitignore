@@ -1,0 +1,27 @@
+# Entornos virtuales de Python
+venv/
+__pycache__/
+*.pyc
+
+# Composer y dependencias PHP
+vendor/
+composer.lock
+
+# PHPMailer si está completo en tu proyecto
+PHPMailer/
+
+# Archivos de entorno
+.env
+
+# Logs y cachés
+*.log
+.cache/
+*.tmp
+
+# Configuración local (opcional)
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
